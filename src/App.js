@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import useFunctions from './components/useFunctions';
+import GetQrCode from './components/GetQrCode';
+import Form from './components/Form';
+import React, { useRef } from 'react';
 
-function App() {
+const App = () => {
+
+  const qrRef = useRef();
+
+  const { text, backgColor, qrColor, handleTextChange, handleBackgChange, handleQrChange, resetAll } = useFunctions();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    <div className='container'>
+
+      <GetQrCode
+        qrRef={qrRef}
+        text={text}
+        bgColor={backgColor}
+        fgColor={qrColor}
+      />
+
+      <Form
+        qrRef={qrRef}
+        text={text}
+        textEvent={handleTextChange}
+        backgEvent={handleBackgChange}
+        qrEvent={handleQrChange}
+        backgColor={backgColor}
+        qrColor={qrColor}
+        resetAll={resetAll}
+      />
+
     </div>
+
   );
+
 }
 
 export default App;

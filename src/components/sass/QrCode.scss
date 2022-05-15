@@ -1,0 +1,15 @@
+@import '../../sass/variables.scss';
+
+.qrCode__container{
+    margin: 0 auto;
+    max-width: 100%;
+    width: 28rem;
+    background-color: $White;
+    padding: 1rem;
+    border-radius: 2rem;
+    @include boxShadow;
+
+    .qrCode{
+        border-radius: 1.5rem;
+    }
+}

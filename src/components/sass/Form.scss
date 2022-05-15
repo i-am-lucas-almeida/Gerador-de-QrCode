@@ -1,0 +1,46 @@
+@import '../../sass/variables.scss';
+
+.form__container {
+    width: 100%;
+    display: block;
+
+    .input-text {
+        margin-top: 3rem;
+        width: 100%;
+        color: $Dark-blue;
+        font-size: 1.6rem;
+        font-family: inherit;
+        padding: 2rem;
+        border-radius: 1rem;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        @include boxShadow;
+    }
+
+    .button-download{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $Dark-blue;
+        color: $White;
+        font-family: inherit;
+        font-size: 2rem;
+        width: 100%;
+        padding: 1rem;
+        border-radius: 1rem;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: .3s;
+
+        span{
+            margin-right: 1rem;
+        }
+
+        &:hover{
+            transform: scale(1.02);
+            opacity: .9;
+        }
+    }
+}

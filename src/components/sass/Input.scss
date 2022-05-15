@@ -1,0 +1,28 @@
+@import '../../sass/variables.scss';
+
+label {
+    margin: 2rem 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s;
+
+    &:hover span {
+        color: $Dark-blue;
+    }
+
+    input {
+        background-color: $White;
+        border-radius: 1rem;
+        padding: .2rem;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+
+    span {
+        margin-left: 2rem;
+        color: $Grayish-blue;
+    }
+}
