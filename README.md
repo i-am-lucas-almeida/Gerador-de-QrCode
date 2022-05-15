@@ -1,3 +1,3 @@
-# Gerador-de-QrCode
+# Gerado de QrCode
 
 Gerador de Qr Code personalizáveis 📱
